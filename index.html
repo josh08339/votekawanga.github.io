@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffcc00" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="manifest.json" />
+  <title>TEAM KAWANGA 2026–2031</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fffbea;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 10px 0 5px;
+    }
+    header p {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+    .councilor {
+      font-size: 1.3em; 
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+    }
+    nav {
+      text-align: center;
+      background-color: #fff3b0;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #cc9900;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .card {
+      background: #fff9d6;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(204, 153, 0, 0.3);
+    }
+    .card h2 {
+      color: #cc9900;
+    }
+    footer {
+      background-color: #ffcc00;
+      color: #000;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    .nrm-badge {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 70px;
+      height: auto;
+      z-index: 999;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    button {
+      padding: 12px 30px;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: changeColor 8s infinite; /* Change color every 2 seconds */
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Keyframes for changing button colors */
+    @keyframes changeColor {
+      0% { background-color: #007bff; }
+      25% { background-color: #6f42c1; }
+      50% { background-color: #28a745; }
+      75% { background-color: #ffc107; }
+      100% { background-color: #007bff; }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      .councilor {
+        font-size: 1.1em;
+      }
+      button {
+        padding: 15px 35px;
+        font-size: 1.5em;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .councilor {
+        font-size: 1em;
+      }
+      button {
+        padding: 12px 30px;
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Team Kawanga Logo">
+  <h1>TEAM KAWANGA 2026–2031</h1>
+<p class="councilor">Councilor LC3 Katanoga Parish</p>
+  <p>For Progress, Unity, and Development</p>
+  
+  <p>
+    <a href="https://wa.me/2560709425050" target="_blank" 
+       style="font-size: 1.5em; font-weight: bold; color: #25D366; text-decoration: none;">
+      <strong style="color: green;">0709425050 (WhatsApp)</strong>
+    </a>
+  </p>
+</header>
+<section id="location">
+  <div class="card">
+    <h2>CHECK MY LOCATION</h2>
+    <p>Click the button below to access your location registration.</p>
+    <a href="https://www.ec.or.ug/register/" target="_blank">
+      <button>CHECK MY LOCATION</button>
+    </a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 TEAM KAWANGA. All rights reserved. <br />
+  Made by Tr Joshua (0702399019)
+</footer>
+
+<!-- NRM Badge -->
+<img src="nrm.png" alt="NRM Logo" class="nrm-badge" />
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+    });
+  }
+</script>
+
+</body>
+</html>
